@@ -6,33 +6,30 @@
     <body>
 
         <script>
-            //Não necessita de definição do tipo de dados
-            var variavel = "Albervan";
-            console.log('variavel = ' + variavel);
-            // Posso mudar o tipo de dados dinamicamente
-            variavel = 2;
-            console.log('variavel = ' + variavel);
+            var x = 10, y = 5;
+            console.log(x, y);
 
-            //Tipos mais comuns
-            var nome = "Albervan";
-            var idade = 33;
-            var peso = 69.4;
-            var humano = true;
+            var resultado = x + y;
+            console.log(resultado);
 
-            var alunos = ['Albervan', 'Geicy', 'Diego'];
+            x = '10';
+            resultado = x + y;
+            console.log(resultado);
 
-            var aluno = {
-                nome: 'Diego',
-                idade: 33,
-                peso: 69.4,
-                humano: true
-            };
+            x = 11;
+            resultado  = x % y; //Módulo
+            console.log('Módulo (resto da divisão) = ' + resultado);
 
-            console.log(nome);
-            console.log(alunos);
-            console.log(alunos[1]);
-            console.log(aluno);
-            console.log(aluno.idade);
+            x = 10;
+            x += 3; //Incremento;
+            console.log(x);
+            //Outras operações simplificadas
+            x *= 3;
+            console.log(x);
+            x /= 3; //Incremento;
+            console.log(x);
+            x *= y; //Incremento;
+            console.log(x);
         </script>
     </body>
 </html>
