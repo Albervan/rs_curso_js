@@ -6,16 +6,20 @@
     <body>
 
         <script>
-            for (var i = 0; i <= 10; i++) {
-                console.log(i);
-            }
+            function exibeAlgo() {
+                console.log('Olá Mundo !!!');
+            };
 
-            var j = 23458765
-            while (j > 50) {
-                console.log(j);
+            // Executa a função continuamente dentro do intervalo setado
+            setInterval(exibeAlgo, 1000); //1 segundo;
 
-                j /= 5;
-            }
+            /*
+            Dica: Se passar a função como parâmetro com os parenteses "exibeAlgo()", o valor do parâmetro não será a função,
+            será o resultado retornado dela. Se quiser passar a função para ser executada por outra função passa sem ();
+            */
+
+            // Executa a função apenas uma vez, após o tempo setado;
+            setTimeout(exibeAlgo, 5000);
         </script>
     </body>
 </html>
