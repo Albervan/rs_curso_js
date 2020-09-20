@@ -6,40 +6,22 @@
     <body>
 
         <script>
-            function retornaSexo(sexo) {
-                /*
-                Para comparação no "if" se utilizar "==" compara apenas a informação
-                Então:
-                if (1 = "1") será True
+            var sexo = 'M', idade = 33;
 
-                se utilizar "===" irá comparar o tipo de dados também, nesse caso
-                if (1 = "q") será false
-                */
-
-                if (sexo === 'M') {
-                    return 'Masculino';
-                } else if (sexo === 'F') {
-                    return 'Feminino';
-                } else {
-                    return 'Errado';
-                }
+            if (sexo === 'M' && idade >= 33) {
+                console.log ('OK and');
             }
 
-            var resultado = retornaSexo('M');
-            console.log(resultado);
+            if (sexo === 'M' || idade >= 3) {
+                console.log ('OK or');
+            }
 
-            function switchSexo(sexo) {
-                switch (sexo) {
-                    case 'M': return 'Masculino';
-                    case 'F': return 'Feminino';
-                    default: return 'Erro';
-                }
-            };
+            if (sexo !== 'F') { //Pode utilizar o != quando não testa o tipo de dados, assim como "=="
+                console.log ('OK not');
+            }
 
-            resultado = switchSexo('F');
-            console.log(resultado);
-            resultado = switchSexo('X');
-            console.log(resultado);
+            var masculino = sexo === 'M';
+            console.log(masculino);
         </script>
     </body>
 </html>
