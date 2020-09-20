@@ -6,15 +6,39 @@
     <body>
 
         <script>
-            function soma(numero1, numero2) {
-                // Não é necessário informar o tipo de dado dos parâmetros nem do retorno da função
-                var resultado = numero1 + numero2;
+            function retornaSexo(sexo) {
+                /*
+                Para comparação no "if" se utilizar "==" compara apenas a informação
+                Então:
+                if (1 = "1") será True
 
-                return resultado;
+                se utilizar "===" irá comparar o tipo de dados também, nesse caso
+                if (1 = "q") será false
+                */
+
+                if (sexo === 'M') {
+                    return 'Masculino';
+                } else if (sexo === 'F') {
+                    return 'Feminino';
+                } else {
+                    return 'Errado';
+                }
             }
 
-            resultado = soma(1, 3);
+            var resultado = retornaSexo('M');
+            console.log(resultado);
 
+            function switchSexo(sexo) {
+                switch (sexo) {
+                    case 'M': return 'Masculino';
+                    case 'F': return 'Feminino';
+                    default: return 'Erro';
+                }
+            };
+
+            resultado = switchSexo('F');
+            console.log(resultado);
+            resultado = switchSexo('X');
             console.log(resultado);
         </script>
     </body>
