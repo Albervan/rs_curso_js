@@ -6,22 +6,14 @@
     <body>
 
         <script>
-            var sexo = 'M', idade = 33;
+            // Condição ternária
 
-            if (sexo === 'M' && idade >= 33) {
-                console.log ('OK and');
-            }
+            var sexo = 'M';
 
-            if (sexo === 'M' || idade >= 3) {
-                console.log ('OK or');
-            }
-
-            if (sexo !== 'F') { //Pode utilizar o != quando não testa o tipo de dados, assim como "=="
-                console.log ('OK not');
-            }
-
-            var masculino = sexo === 'M';
-            console.log(masculino);
+            var retorno = (sexo == 'M') ? 'Masculino' : 'Feminino';
+            // O sinal "?" indica o valor se verdadeiro;
+            //O sinal ":" indica o valor se falso;
+            console.log(retorno);
         </script>
     </body>
 </html>
