@@ -6,30 +6,16 @@
     <body>
 
         <script>
-            var x = 10, y = 5;
-            console.log(x, y);
+            function soma(numero1, numero2) {
+                // Não é necessário informar o tipo de dado dos parâmetros nem do retorno da função
+                var resultado = numero1 + numero2;
 
-            var resultado = x + y;
+                return resultado;
+            }
+
+            resultado = soma(1, 3);
+
             console.log(resultado);
-
-            x = '10';
-            resultado = x + y;
-            console.log(resultado);
-
-            x = 11;
-            resultado  = x % y; //Módulo
-            console.log('Módulo (resto da divisão) = ' + resultado);
-
-            x = 10;
-            x += 3; //Incremento;
-            console.log(x);
-            //Outras operações simplificadas
-            x *= 3;
-            console.log(x);
-            x /= 3; //Incremento;
-            console.log(x);
-            x *= y; //Incremento;
-            console.log(x);
         </script>
     </body>
 </html>
