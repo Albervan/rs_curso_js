@@ -4,22 +4,24 @@
     </head>
 
     <body>
+        <div id="app">
+            <button onclick="mostraAlerta()" onmouseover="mostraMovimento()">Me pressione</button>
+
+            <input onkeypress="apertaTecla()"/>
+        </div>
 
         <script>
-            function exibeAlgo() {
-                console.log('Olá Mundo !!!');
-            };
+            function mostraAlerta() {
+                alert('Botão foi clicado');
+            }
+            
+            function mostraMovimento() {
+                alert('Mouse moveu');
+            }
 
-            // Executa a função continuamente dentro do intervalo setado
-            setInterval(exibeAlgo, 1000); //1 segundo;
-
-            /*
-            Dica: Se passar a função como parâmetro com os parenteses "exibeAlgo()", o valor do parâmetro não será a função,
-            será o resultado retornado dela. Se quiser passar a função para ser executada por outra função passa sem ();
-            */
-
-            // Executa a função apenas uma vez, após o tempo setado;
-            setTimeout(exibeAlgo, 5000);
+            function apertaTecla() {
+                alert('Tecla apertada');
+            }
         </script>
     </body>
 </html>
