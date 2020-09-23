@@ -1,2 +1,3 @@
-# rs_curso_js
- Rocketseat - Starter - Curso JavaScript
+# Rocketseat - Starter - **Curso JavaScript**
+
+> rs_curso_js
