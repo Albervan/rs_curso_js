@@ -5,29 +5,17 @@
 
     <body>
         <div id="app">
-            <input id="nome"/>
+            <div class="box">
+
+            </div>
         </div>
 
         <script>
-            //Criar um elemento pelo JavaScript com a seguinte equivalência no html
-            //<a href="https://github.com/Albervan">Acessar Site GitHub Albervan</a>
+            var boxElement = document.querySelector('.box');
 
-            var linkElement = document.createElement('a');
-
-            linkElement.setAttribute('href', 'https://github.com/Albervan');
-            //ou pode utilizar "linkElement.href"
-            linkElement.setAttribute('title', 'GitHub Albervan');
-
-            var textElement = document.createTextNode('Acessar Site GitHub Albervan');
-            linkElement.appendChild(textElement);
-
-            //captura um elemento existente pelo id
-            var containerElement = document.querySelector('#app');
-            containerElement.appendChild(linkElement);
-
-            //remover um elemento da tela.
-            var inputElement = document.querySelector('#nome');
-            containerElement.removeChild(inputElement);
+            boxElement.style.width = 100;
+            boxElement.style.height = 100;
+            boxElement.style.backgroundColor = '#f00';
         </script>
     </body>
 </html>
