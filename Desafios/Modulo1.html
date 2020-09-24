@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>Exercícios: Módulo 01</title>
+    </head>
+
+    <body>
+        <div id="ex1">
+
+        </div>
+
+        <script>
+            //1º Exercício
+            var endereco = {
+                rua : "Rua Jatobá",
+                numero : 2345,
+                bairro : "Primavera",
+                cidade : "Primavera do Leste",
+                uf : "MT"
+            }
+
+            var resposta = 'O usuário mora em ' + endereco.cidade + ' / ' + endereco.uf + ', no bairro ' + endereco.bairro + ', na rua "' + endereco.rua + '" com nº ' + endereco.numero + '.'
+
+            console.log('1º Exercício: ' + resposta);
+
+            //2º Exercício
+            function pares(x, y) {
+                var testa
+                while (x <= y) {
+                    testa = x % 2;
+                    if (testa === 0) {
+                        console.log(x);
+                    }
+                    x++;
+                }
+            }
+
+            console.log('2º Exercício')
+            pares(32, 321);
+
+            //3º Exercício
+            function temHabilidade(skills, skillFind) {
+                var achou = skills.indexOf(skillFind);
+
+                return achou >= 0;
+            }
+
+            var skills = ["Javascript", "ReactJS", "React Native"];
+            
+            resposta = temHabilidade(skills, 'Javascript');
+
+            console.log('3º Exercício: ' + resposta);
+
+            //4º Exercício
+            function experiencia(anos) {
+                var nivel
+
+                if (anos >= 0 && anos <= 1) {
+                    nivel = "Iniciante";
+                } else
+                if (anos <= 3) {
+                    nivel = "Intermediário";
+                } else
+                if (anos <= 6) {
+                    nivel = "Avançado";
+                } else
+                if (anos >= 7) {
+                    nivel = "Jedi Master";
+                }
+
+                return nivel
+            }
+
+            var anosEstudo = 7;
+            resposta = experiencia(anosEstudo);
+
+            console.log("4º Exercício: " + resposta);
+
+            //5º Exercício
+            var usuarios = [
+                {
+                    nome: "Diego",
+                    habilidades: ["Javascript", "ReactJS", "Redux"]
+                },
+                {
+                    nome: "Albervan",
+                    habilidades: ["ObjectPascal", "SQL Server", "Javascript"]
+                }
+            ];
+
+            console.log('5º Exercício:');
+            for (const usuario of usuarios) {
+                console.log('O ' + usuario.nome + ' possui as habilidades: ' + usuario.habilidades.join(', '));
+            }
+        </script>
+    </body>
+</html>
