@@ -5,47 +5,29 @@
 
     <body>
         <div id="app">
-            <input type="text" name="nome" id="campo"/>
-
-            <button class="botao">Adicionar</button>
-            
-            <input type="text" name="nome2" id="campo2"/>
+            <input id="nome"/>
         </div>
 
         <script>
-            var inputElement = document.getElementById('campo');
-            console.log(inputElement);
+            //Criar um elemento pelo JavaScript com a seguinte equivalência no html
+            //<a href="https://github.com/Albervan">Acessar Site GitHub Albervan</a>
 
-            var inputElements = document.getElementsByTagName('input');
-            console.log(inputElements);
+            var linkElement = document.createElement('a');
 
-            inputElement = document.getElementsByTagName('input')[0];
-            console.log(inputElement);
+            linkElement.setAttribute('href', 'https://github.com/Albervan');
+            //ou pode utilizar "linkElement.href"
+            linkElement.setAttribute('title', 'GitHub Albervan');
 
-            inputElements = document.getElementsByClassName('botao');
-            console.log(inputElements);
+            var textElement = document.createTextNode('Acessar Site GitHub Albervan');
+            linkElement.appendChild(textElement);
 
-            inputElements = document.getElementsByClassName('botao')[0];
-            console.log(inputElements);
+            //captura um elemento existente pelo id
+            var containerElement = document.querySelector('#app');
+            containerElement.appendChild(linkElement);
 
-            //Método recomendado pelo Diego
-            inputElements = document.querySelector('div#app input');
-            console.log(inputElements);
-
-            inputElements = document.querySelector('input[name=nome]');
-            console.log(inputElements);
-
-            inputElements = document.querySelectorAll('input');
-            console.log(inputElements);
-
-            inputElements = document.querySelector('input[name=nome]');
-            var btnElement = document.querySelector('button.botao');
-
-            btnElement.onclick = function() {
-                var texto = inputElements.value;
-
-                alert(texto);
-            };
+            //remover um elemento da tela.
+            var inputElement = document.querySelector('#nome');
+            containerElement.removeChild(inputElement);
         </script>
     </body>
 </html>
