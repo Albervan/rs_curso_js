@@ -8,3 +8,14 @@ var todos = [
     'Aessar comunidade da Rocketseat'
 ];
 
+function renderTodos() {
+    for (todo of todos) {
+        var todoElement = document.createElement('li');
+        var todoText = document.createTextNode(todo);
+
+        todoElement.appendChild(todoText);
+        listElement.appendChild(todoElement);
+    }
+}
+
+renderTodos();
