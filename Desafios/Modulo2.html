@@ -1,0 +1,28 @@
+<head>
+    <title>Exercícios: Módulo 2</title>
+</head>
+<body>
+    <div id='md2'>
+        <button>Add Quadrado</button>
+
+        <div class='box'></div>
+    </div>
+
+    <script>
+        buttonElement = document.querySelector('#md2 button');
+
+        function AddQuadro() {
+            var quadroElement = document.createElement('div');
+
+            quadroElement.style.width = 100;
+            quadroElement.style.height = 100;
+            quadroElement.style.backgroundColor = '#f00';
+
+            var containerElement = document.querySelector('#md2');
+            containerElement.appendChild(quadroElement);
+        }
+
+        buttonElement.onclick = AddQuadro;
+    </script>
+</body>
+</html>
