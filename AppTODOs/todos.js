@@ -11,7 +11,7 @@ function renderTodos() {
     for (todo of todos) {
         //Criar elemento para item da lista
         var todoElement = document.createElement('li');
-        var todoText = document.createTextNode(todo);
+        var todoText = document.createTextNode(todo + ' | ');
 
         //Criar elemento link
         var linkElement = document.createElement('a');
