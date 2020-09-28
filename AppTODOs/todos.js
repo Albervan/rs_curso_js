@@ -9,6 +9,8 @@ var todos = [
 ];
 
 function renderTodos() {
+    listElement.innerHTML = ''; //Remover todo o conteúdo que existir dentro da lista
+
     for (todo of todos) {
         var todoElement = document.createElement('li');
         var todoText = document.createTextNode(todo);
@@ -19,3 +21,14 @@ function renderTodos() {
 }
 
 renderTodos();
+
+function addTodo() {
+    var todoText = inputElement.value;
+
+    todos.push(todoText); //Função para adicionar um novo valor no final do array
+    inputElement.value = '';
+
+    renderTodos();
+}
+
+buttonElement.onclick = addTodo;
