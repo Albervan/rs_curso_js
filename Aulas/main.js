@@ -1,13 +1,28 @@
-//Essa classe que permite acessar o AJAX para recuperar informações do servidor
-var xhr = new XMLHttpRequest();
+var minhaPromise = function() {
+    return new Promise(function(resolve, reject) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'https://api.github.com/users/albervan');
+        xhr.send(null);
 
-xhr.open('GET', 'https://api.github.com/users/albervan');
-xhr.send(null);
-
-//Como o AJAX é Assíncrono, suas respostas não seguem o fluxo de execução do javascript
-//Para isso é necessário utilizar funções e métodos para aguardar e recuperar as respostas
-xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4) {
-        console.log(JSON.parse(xhr.responseText));
-    }
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4) {
+                //Verificar o código de sucesso conforme o que identificamos no log Network
+                if (xhr.status === 200) {
+                    resolve(JSON.parse(xhr.responseText));
+                } else {
+                    reject('Erro na requisição');
+                }
+            }
+        }
+    });
 }
+
+minhaPromise()
+    //Se a Promise obtiver sucesso a função "resolve" implementada vai chamar a função "then"
+    .then(function(response) {
+        console.log(response);
+    })
+    //Se a Promise não teve sucesso a função "reject" implementada vai chamar a função "catch"
+    .catch(function(error) {
+        console.warn(error);
+    });
