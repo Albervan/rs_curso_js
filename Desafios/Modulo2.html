@@ -4,12 +4,13 @@
 <body>
     <div id='md2'>
         <button>Add Quadrado</button>
-
-        <div class='box'></div>
+        
     </div>
 
     <script>
+        //1º Exercício
         buttonElement = document.querySelector('#md2 button');
+        var quadroIndex = 0;
 
         function AddQuadro() {
             var quadroElement = document.createElement('div');
@@ -18,11 +19,34 @@
             quadroElement.style.height = 100;
             quadroElement.style.backgroundColor = '#f00';
 
+            quadroElement.setAttribute('class', 'q' + quadroIndex);
+            quadroElement.setAttribute('onmousemove', 'changeColor(' + quadroIndex + ')');
+            quadroIndex++;
+
             var containerElement = document.querySelector('#md2');
             containerElement.appendChild(quadroElement);
         }
 
         buttonElement.onclick = AddQuadro;
+
+        //2º Exercício
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+
+            return color;
+        }
+
+        function changeColor(indexElement) {
+            var newColor = getRandomColor();
+
+            var colorElement = document.querySelector('.q' + indexElement);
+            colorElement.style.backgroundColor = newColor;
+        }
     </script>
 </body>
 </html>
