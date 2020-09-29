@@ -5,6 +5,8 @@
     <div id='md2'>
         <button>Add Quadrado</button>
         
+        <input type="text" name="nome" placeholder="Digite o Nome">
+        <button id="addName">Adicionar Nome</button>
         <ul></ul>
     </div>
 
@@ -60,7 +62,7 @@
         var listElement = document.querySelector('#md2 ul');
 
         function preencherLista() {
-            listElement.innerHTML; //Limpar lista
+            listElement.innerHTML = ''; //Limpar lista
 
             for (item of nomes) {
                 var itemElemente = document.createElement('li');
@@ -73,6 +75,19 @@
         }
 
         preencherLista();
+
+        //4º Exercício
+        function AddNomes() {
+            var inputElement = document.querySelector('#md2 input');
+
+            nomes.push(inputElement.value);
+            inputElement.value = '';
+
+            preencherLista();
+        }
+        
+        var buttonAddElement = document.querySelector('#addName');
+        buttonAddElement.onclick = AddNomes;
     </script>
 </body>
 </html>
