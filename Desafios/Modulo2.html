@@ -5,6 +5,7 @@
     <div id='md2'>
         <button>Add Quadrado</button>
         
+        <ul></ul>
     </div>
 
     <script>
@@ -47,6 +48,31 @@
             var colorElement = document.querySelector('.q' + indexElement);
             colorElement.style.backgroundColor = newColor;
         }
+
+        //3º Exercício
+        var nomes = [
+            'Diego',
+            'Gabriel',
+            'Lucas',
+            'Albervan'
+        ]
+
+        var listElement = document.querySelector('#md2 ul');
+
+        function preencherLista() {
+            listElement.innerHTML; //Limpar lista
+
+            for (item of nomes) {
+                var itemElemente = document.createElement('li');
+                var text = document.createTextNode(item);
+
+                itemElemente.appendChild(text);
+
+                listElement.appendChild(itemElemente);
+            }
+        }
+
+        preencherLista();
     </script>
 </body>
 </html>
