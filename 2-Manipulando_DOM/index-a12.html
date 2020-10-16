@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Curso JavaScript [ Aula 12 - Trabalhando com a DOM ]</title>
+    </head>
+
+    <body>
+        <div id="app">
+            <input type="text" name="nome" id="campo"/>
+
+            <button class="botao">Adicionar</button>
+            
+            <input type="text" name="nome2" id="campo2"/>
+        </div>
+
+        <script>
+            var inputElement = document.getElementById('campo');
+            console.log(inputElement);
+
+            var inputElements = document.getElementsByTagName('input');
+            console.log(inputElements);
+
+            inputElement = document.getElementsByTagName('input')[0];
+            console.log(inputElement);
+
+            inputElements = document.getElementsByClassName('botao');
+            console.log(inputElements);
+
+            inputElements = document.getElementsByClassName('botao')[0];
+            console.log(inputElements);
+
+            //Método recomendado pelo Diego
+            inputElements = document.querySelector('div#app input');
+            console.log(inputElements);
+
+            inputElements = document.querySelector('input[name=nome]');
+            console.log(inputElements);
+
+            inputElements = document.querySelectorAll('input');
+            console.log(inputElements);
+
+            inputElements = document.querySelector('input[name=nome]');
+            var btnElement = document.querySelector('button.botao');
+
+            btnElement.onclick = function() {
+                var texto = inputElements.value;
+
+                alert(texto);
+            };
+        </script>
+    </body>
+</html>

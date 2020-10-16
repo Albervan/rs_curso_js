@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Curso JavaScript [ Aula 11 - Eventos inline ]</title>
+    </head>
+
+    <body>
+        <div id="app">
+            <button onclick="mostraAlerta()" onmouseover="mostraMovimento()">Me pressione</button>
+
+            <input onkeypress="apertaTecla()"/>
+        </div>
+
+        <script>
+            function mostraAlerta() {
+                alert('Botão foi clicado');
+            }
+            
+            function mostraMovimento() {
+                alert('Mouse moveu');
+            }
+
+            function apertaTecla() {
+                alert('Tecla apertada');
+            }
+        </script>
+    </body>
+</html>
