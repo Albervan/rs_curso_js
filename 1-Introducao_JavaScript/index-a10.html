@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Curso JavaScript [ Aula 10 - Intervalo e timeout ]</title>
+    </head>
+
+    <body>
+
+        <script>
+            function exibeAlgo() {
+                console.log('Olá Mundo !!!');
+            };
+
+            // Executa a função continuamente dentro do intervalo setado
+            setInterval(exibeAlgo, 1000); //1 segundo;
+
+            /*
+            Dica: Se passar a função como parâmetro com os parenteses "exibeAlgo()", o valor do parâmetro não será a função,
+            será o resultado retornado dela. Se quiser passar a função para ser executada por outra função passa sem ();
+            */
+
+            // Executa a função apenas uma vez, após o tempo setado;
+            setTimeout(exibeAlgo, 5000);
+        </script>
+    </body>
+</html>

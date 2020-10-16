@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Curso JavaScript [ Aula 6 - Condicionais ]</title>
+    </head>
+
+    <body>
+
+        <script>
+            function retornaSexo(sexo) {
+                /*
+                Para comparação no "if" se utilizar "==" compara apenas a informação
+                Então:
+                if (1 = "1") será True
+
+                se utilizar "===" irá comparar o tipo de dados também, nesse caso
+                if (1 = "q") será false
+                */
+
+                if (sexo === 'M') {
+                    return 'Masculino';
+                } else if (sexo === 'F') {
+                    return 'Feminino';
+                } else {
+                    return 'Errado';
+                }
+            }
+
+            var resultado = retornaSexo('M');
+            console.log(resultado);
+
+            function switchSexo(sexo) {
+                switch (sexo) {
+                    case 'M': return 'Masculino';
+                    case 'F': return 'Feminino';
+                    default: return 'Erro';
+                }
+            };
+
+            resultado = switchSexo('F');
+            console.log(resultado);
+            resultado = switchSexo('X');
+            console.log(resultado);
+        </script>
+    </body>
+</html>

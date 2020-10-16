@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Curso JavaScript [ Aula 7 - Operadores lógicos ]</title>
+    </head>
+
+    <body>
+
+        <script>
+            var sexo = 'M', idade = 33;
+
+            if (sexo === 'M' && idade >= 33) {
+                console.log ('OK and');
+            }
+
+            if (sexo === 'M' || idade >= 3) {
+                console.log ('OK or');
+            }
+
+            if (sexo !== 'F') { //Pode utilizar o != quando não testa o tipo de dados, assim como "=="
+                console.log ('OK not');
+            }
+
+            var masculino = sexo === 'M';
+            console.log(masculino);
+        </script>
+    </body>
+</html>
