@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JavaScript [ Exercício 1: Módulo 4 ]</title>
+</head>
+<body>
+    
+    <script>
+        //1º Exercício
+        var checaIdade = function(idade) {
+            return new Promise(function(resolve, reject) {
+                setTimeout(function () {
+                    if (idade > 18) {
+                        resolve('Maior de 18 anos.');
+                    } else {
+                        reject('Menor de 18 anos');
+                    }
+                }, 2000);
+            });
+        }
+
+        checaIdade(20)
+            .then(function(maior) {
+                console.log(maior);
+            })
+            .catch(function(menor) {
+                console.log(menor);
+            });
+    </script>
+</body>
+</html>
