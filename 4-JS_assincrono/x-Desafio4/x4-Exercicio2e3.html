@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Curso JavaScript [ Exercício 2 e 3: Módulo 4 ]</title>
+    </head>
+
+    <body>
+        <input type="text" name="user" default="albervan">
+        <button>Adicionar</button>
+
+        <ul></ul>
+
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script>
+            var inputElement = document.querySelector('input');
+            var buttonElement = document.querySelector('button');
+            var ulElement = document.querySelector('ul');
+
+            buttonElement.onclick = function() {
+                var url = "https://api.github.com/users/<user>/repos";
+                url = url.replace("<user>", inputElement.value);
+                
+                ulElement.innerHTML = '';
+                var textElement = document.createTextNode('Carregando ...');
+                ulElement.appendChild(textElement);
+
+                axios.get(url)
+                    .then(function(response) {
+                        var repos = response.data;
+
+                        ulElement.innerHTML = '';
+
+                        for (repo of repos) {
+                            var liElement = document.createElement('li');
+                            textElement = document.createTextNode(repo.name);
+                            
+                            liElement.appendChild(textElement);
+                            ulElement.appendChild(liElement);
+                        };
+                    })
+                    .catch(function(error) {
+                        ulElement.innerHTML = '';
+
+                        textElement = document.createTextNode('Usuário não encontrado. (' + error + ')');
+                        ulElement.appendChild(textElement);
+                    });
+            };
+        </script>
+    </body>
+</html>
