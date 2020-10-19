@@ -1,6 +1,6 @@
 # Rocketseat - Starter - **Curso JavaScript**
 
->  Curso disponibilizado pela ![image-20201016173715869](.\images\image-20201016173715869.png)
+>  Curso disponibilizado pela ![image-20201016173715869](\images\image-20201016173715869.png)
 
 
 
