@@ -16,6 +16,8 @@
 
 <img src="C:\Users\Albervan\AppData\Roaming\Typora\typora-user-images\image-20201016174755298.png" alt="image-20201016174755298" style="zoom:80%;" /> 
 
+- Curso concluído 100%!
+> 19/01/2020
 
 
 > Repositório: rs_curso_js
